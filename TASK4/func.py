@@ -21,10 +21,7 @@ def command3(msg):
     size = validate_size(msg)
     start = validate_number(msg["start_num"], msg)
     end = validate_number(msg["end_num"], msg)
-    ll = LinkedList()
-    my_gen = generator(size, start, end)
-    for i in my_gen:
-        ll.insert_at_end(i)
+    ll = random_generate(size, start, end)
     ll.print()
     return ll
 

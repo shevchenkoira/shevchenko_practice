@@ -51,6 +51,8 @@ def random_fill(size, start, end):
 
 def random_generate(size, start, end):
     ll = LinkedList()
-    ll.insert_at_end(generator(size, start, end))
+    my_gen = generator(size, start, end)
+    for i in my_gen:
+        ll.insert_at_end(i)
     return ll
 
